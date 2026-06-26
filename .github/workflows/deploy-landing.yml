@@ -4,7 +4,7 @@ on:
   push:
     branches: [main, voice-and-date-anchoring]
     paths:
-      - 'landing/**'
+      - 'index.html'
       - '.github/workflows/deploy-landing.yml'
   workflow_dispatch:
 
@@ -28,7 +28,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: landing
+          path: .
 
       - id: deployment
         uses: actions/deploy-pages@v4
